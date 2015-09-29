@@ -2,16 +2,44 @@
 
 // 1. Define a function called "divideByTwo". It should accept one parameter called "number".
 //    The function should divide the number by two and output the answer.
-
+console.log("Question 1");
+var divideByTwo = function(number) {
+var number = number / 2;
+return number;
+}
+divideByTwo(6);
 // 2. Define a function called "greeting". It should accept two parameters, which will be names.
 //    The function should output the a greeting to both people.
-
+console.log("Question 2");
+var greeting = function(name1, name2) {
+  return "Hello " + name1 + " " + name2;
+}
+console.log(greeting("Calle", "Friberg."));
 // 3. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month, but the price keeps changing.
 //    Write a function that takes the price per unit and calculates the total for you each month.
-
+console.log("Question 3. Amazon nuts");
+var amazonNuts = function(price) {
+  var price = price * 6;
+  return price;
+}
+console.log(amazonNuts(10));
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
+console.log("Question 4. Teams");
       teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
+var team1 = [];
+var team2 = [];
+var separatePeople = function(teammates) {
+  for (i=0; i < teammates.length; i++) {
+    if (i % 2 === 0) { // % 2 === 0 so that if there is a remainder, it knows to seperate thtem out.
+      team1.push(teammates[i]);
+    } else {
+      team2.push(teammates[i]);
+    }
+    console.log(team1, team2);
+  }
+}
+separatePeople(teammates);
 
 // 5. Define a function called "quarter". It accepts one parameter called "number".
 //    The function will return a value which is one quarter of the number provided.
@@ -24,7 +52,19 @@
 //                      print out a statement saying the number is even
 //                  else
 //                      print out a statement saying the number is odd
+console.log("Question 5. Quarter.");
+var quarter = function(number) {
+  var num = number / 4;
 
+ if (num % 2 === 0) {
+    console.log("Even");
+ }
+   else {
+    console.log("Odd");
+   }
+   return num;
+ }
+ quarter(100);
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
 
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
@@ -60,7 +100,7 @@
 
 // 14. Create a function that determines whether a parameter is a number or not (Hint: google "isNan")
 //     Iterate over the elements in the following array to determine if each is a number.
-       arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"]
+       //arrayOfAllTheThings = ["one", 23, {thingsWhalesLove: "beaches"}, "six hundred", 33, 6834, "5,435"]
 
 // 15. Create a die rolling function that accepts two parameters (the two six-sided dice) and outputs an array of the two values rolled.
 
