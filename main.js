@@ -66,10 +66,26 @@ var quarter = function(number) {
  }
  quarter(100);
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
+console.log("Question 6. perimeter");
+var area = function(num1, num2) {
+    var totalArea = num1 * num2;
+    return totalArea;
+}
+
+console.log(area(3, 5));
+
+var perimeter = function(num1, num2) {
+    var totalPerimeter = 2 * (num1 + num2);
+    return totalPerimeter;
+}
+
+console.log(perimeter(5, 5));
 
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
 //    Write a conditional statement inside of the function. If the number of hours is more than 8, print a statement to the console about getting enough rest.
 //    If the number of hours is less than 8, print a statement recommending the user get more shut eye.
+console.log("Question 7.");
+var sleepings = function()
 
 // 8. Prompt a user to enter a six digit number. Write a function that reverses the number.
 //    (Hint, you will have to turn the integer into a string before you can reverse it.)
